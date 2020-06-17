@@ -164,3 +164,13 @@ exports[`Recipes Component when \`useFetch\` returns data when no data returned 
   </section>
 </div>
 `;
+
+exports[`Recipes Component when \`useFetch\` returns error displays Error message 1`] = `
+<div>
+  <section>
+    <h2>
+      Recipes
+    </h2>
+  </section>
+</div>
+`;

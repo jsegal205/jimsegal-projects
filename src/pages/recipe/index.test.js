@@ -40,7 +40,27 @@ describe("Recipe Component", () => {
 
         useFetch.mockReturnValue({
           loading: false,
-          data: { status: 404 },
+          data: { error: "Not Found", status: 404 },
+        });
+
+        const tree = renderer.create(<Recipe {...props} />);
+        expect(useFetch).toHaveBeenCalledWith(`${apiUrlBase}/recipe/${slug}`);
+        expect(tree.toJSON()).toMatchSnapshot();
+      });
+    });
+
+    describe("with 500 status", () => {
+      it("displays Error message", () => {
+        const slug = "serverError";
+        const props = {
+          location: {
+            pathname: slug,
+          },
+        };
+
+        useFetch.mockReturnValue({
+          loading: false,
+          data: { error: "Server Error", status: 500 },
         });
 
         const tree = renderer.create(<Recipe {...props} />);

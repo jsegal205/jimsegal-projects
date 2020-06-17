@@ -76,6 +76,23 @@ describe("Recipes Component", () => {
     });
   });
 
+  describe("when `useFetch` returns error", () => {
+    it("displays Error message", () => {
+      useFetch.mockReturnValue({
+        loading: false,
+        error: "Error happenend",
+        status: 500,
+      });
+
+      const { container } = render(
+        <Router>
+          <Recipes />
+        </Router>
+      );
+      expect(container).toMatchSnapshot();
+    });
+  });
+
   describe("Search filtering", () => {
     const apiData = [
       {

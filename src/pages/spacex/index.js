@@ -27,7 +27,7 @@ const SpaceX = () => {
 
   const [timeToLaunch, setTimeToLaunch] = useState(calcTimeToLaunch());
   useEffect(() => {
-    if (!loading) {
+    if (!loading && upcomingLaunch) {
       if (upcomingLaunch.error) {
         setTimeToLaunch(0);
         return;

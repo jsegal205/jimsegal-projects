@@ -81,3 +81,15 @@ exports[`SpaceX Component when \`useFetch\` returns data when no data returned d
   </section>
 </div>
 `;
+
+exports[`SpaceX Component when \`useFetch\` returns error displays Error message 1`] = `
+<div>
+  <section
+    class="spacex-container"
+  >
+    <h2>
+      Next Space X Launch
+    </h2>
+  </section>
+</div>
+`;

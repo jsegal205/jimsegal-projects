@@ -9,8 +9,7 @@ import * as serviceWorker from "./serviceWorker";
 
 if (process.env.NODE_ENV === "production") {
   Sentry.init({
-    dsn:
-      "https://3ec844af5d6d4927932a6c92934cdf1a@o345528.ingest.sentry.io/5583309",
+    dsn: "https://3ec844af5d6d4927932a6c92934cdf1a@o345528.ingest.sentry.io/5583309",
     autoSessionTracking: true,
     integrations: [new Integrations.BrowserTracing()],
 

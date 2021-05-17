@@ -18,9 +18,10 @@ const withTracker = (WrappedComponent, options = {}) => {
   };
 
   const HOC = (props) => {
-    useEffect(() => trackPage(props.location.pathname), [
-      props.location.pathname,
-    ]);
+    useEffect(
+      () => trackPage(props.location.pathname),
+      [props.location.pathname]
+    );
 
     return <WrappedComponent {...props} />;
   };

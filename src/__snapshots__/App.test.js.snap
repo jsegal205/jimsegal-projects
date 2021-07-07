@@ -161,6 +161,30 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="project-list-item-link"
+            href="/random-placeholder"
+          >
+            <div
+              class="project-list-item-placeholder"
+              style="background-color: rgb(0, 0, 0);"
+            >
+              <h2
+                class="project-list-item-title"
+                style="color: rgb(68, 68, 68);"
+              >
+                Random Placeholder
+              </h2>
+            </div>
+            <p>
+              When you are overwhelmed by placeholder images
+            </p>
+          </a>
+        </li>
+        <li
+          class="project-list-item"
+          style="border-color: #ffffff;"
+        >
+          <a
+            class="project-list-item-link"
             href="https://jimsegal.com/readinglist/"
           >
             <div

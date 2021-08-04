@@ -1,0 +1,33 @@
+.wheel-container {
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.wheel {
+  background: red;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.slice {
+  position: absolute;
+  /* border: 2px solid green;
+  padding: 10px;
+  margin-bottom: 5px; */
+  top: calc(50% - 15px);
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 30px;
+  transform: rotate(var(--deg)) translate(-50%, 104px);
+}
+
+.slice.selected {
+  color: green;
+  font-weight: 800;
+  background-color: yellow;
+}

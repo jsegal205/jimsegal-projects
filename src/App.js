@@ -16,6 +16,7 @@ import Home from "./pages/home";
 import Shorts from "./pages/shorts";
 import MountainGoat from "./pages/mountian-goat";
 import DogeTracker from "./pages/dogetracker";
+import Spin from "./pages/spin";
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
             <Route path="/recipes" component={withTracker(Recipes)} />
             <Route path="/recipe/:recipeSlug" component={withTracker(Recipe)} />
             <Route path="/spacex" component={withTracker(SpaceX)} />
+            <Route path="/spin" component={withTracker(Spin)} />
             <Route path="*" component={withTracker(NotFound)} />
           </Switch>
         </article>

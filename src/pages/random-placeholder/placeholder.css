@@ -1,0 +1,33 @@
+.dimensions,
+.placeholder {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.input {
+  display: flex;
+  margin: 3px;
+}
+.input > .col {
+  flex: 1;
+}
+.input > .col.one-third {
+  width: 32%;
+}
+.input > .col.two-third {
+  display: flex;
+  width: 66%;
+}
+
+.placeholder {
+  margin-top: 2em;
+}
+
+.placeholder-error {
+  color: #990000;
+}
+.placeholder-input-error {
+  margin: 0;
+  border: 3px solid #990000;
+}

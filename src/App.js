@@ -16,6 +16,7 @@ import Home from "./pages/home";
 import Shorts from "./pages/shorts";
 import MountainGoat from "./pages/mountian-goat";
 import DogeTracker from "./pages/dogetracker";
+import RandomPlaceholder from "./pages/random-placeholder";
 
 const App = () => {
   return (
@@ -40,6 +41,10 @@ const App = () => {
             <Route path="/dogetracker" component={withTracker(DogeTracker)} />
             <Route path="/isJimWearingShorts" component={withTracker(Shorts)} />
             <Route path="/mountaingoat" component={withTracker(MountainGoat)} />
+            <Route
+              path="/random-placeholder"
+              component={withTracker(RandomPlaceholder)}
+            />
             <Route path="/recipes" component={withTracker(Recipes)} />
             <Route path="/recipe/:recipeSlug" component={withTracker(Recipe)} />
             <Route path="/spacex" component={withTracker(SpaceX)} />

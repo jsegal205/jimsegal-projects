@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import renderer from "react-test-renderer";
 
 import { adminUrlBase } from "../../utils";
@@ -24,7 +25,11 @@ describe("Recipe Component", () => {
         data: {},
       });
 
-      const tree = renderer.create(<Recipe {...props} />);
+      const tree = renderer.create(
+        <Router>
+          <Recipe {...props} />
+        </Router>
+      );
       expect(useFetch).toHaveBeenCalledWith(`${baseUrl}/${slug}`);
       expect(tree.toJSON()).toMatchSnapshot();
     });
@@ -65,7 +70,11 @@ describe("Recipe Component", () => {
           data: { error: "server likely on fire", status: 500 },
         });
 
-        const tree = renderer.create(<Recipe {...props} />);
+        const tree = renderer.create(
+          <Router>
+            <Recipe {...props} />
+          </Router>
+        );
         expect(useFetch).toHaveBeenCalledWith(`${baseUrl}/${slug}`);
         expect(tree.toJSON()).toMatchSnapshot();
       });
@@ -93,7 +102,11 @@ describe("Recipe Component", () => {
           },
         });
 
-        const tree = renderer.create(<Recipe {...props} />);
+        const tree = renderer.create(
+          <Router>
+            <Recipe {...props} />
+          </Router>
+        );
         expect(useFetch).toHaveBeenCalledWith(`${baseUrl}/${slug}`);
         expect(tree.toJSON()).toMatchSnapshot();
       });
@@ -120,7 +133,11 @@ describe("Recipe Component", () => {
         },
       });
 
-      const tree = renderer.create(<Recipe {...props} />);
+      const tree = renderer.create(
+        <Router>
+          <Recipe {...props} />
+        </Router>
+      );
       expect(useFetch).toHaveBeenCalledWith(`${baseUrl}/${slug}`);
       expect(tree.toJSON()).toMatchSnapshot();
     });

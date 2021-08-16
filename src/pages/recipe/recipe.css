@@ -4,3 +4,11 @@
 .directions {
   margin: 0 1.5em;
 }
+.recipe-back {
+  border: 2px solid #444444;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 5px 10px;
+}

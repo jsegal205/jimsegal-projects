@@ -17,6 +17,16 @@ exports[`Recipe Component when \`useFetch\` is awaiting promise to resolve displ
 
 exports[`Recipe Component when \`useFetch\` returns data displays data with valid null fields 1`] = `
 <section>
+  <div
+    className="recipe-back"
+  >
+    <a
+      href="/recipes"
+      onClick={[Function]}
+    >
+      All Recipes
+    </a>
+  </div>
   <h2>
     title
   </h2>
@@ -45,6 +55,16 @@ exports[`Recipe Component when \`useFetch\` returns data displays data with vali
 
 exports[`Recipe Component when \`useFetch\` returns data with 200 status displays data 1`] = `
 <section>
+  <div
+    className="recipe-back"
+  >
+    <a
+      href="/recipes"
+      onClick={[Function]}
+    >
+      All Recipes
+    </a>
+  </div>
   <h2>
     title
   </h2>

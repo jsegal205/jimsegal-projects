@@ -10,6 +10,7 @@ import Loading from "../../components/loading";
 
 import "../../App.css";
 import "./recipe.css";
+import { Link } from "react-router-dom";
 
 const getSlug = ({ pathname, state }) => {
   if (state && state.slug) {
@@ -42,6 +43,9 @@ const Recipe = (props) => {
 
   return (
     <section>
+      <div className="recipe-back">
+        <Link to="/recipes">All Recipes</Link>
+      </div>
       <h2>{title}</h2>
       {referenceLink && (
         <small>

@@ -33,6 +33,12 @@ exports[`Recipe Component when \`useFetch\` returns data displays data with vali
   <h3>
     Ingredients
   </h3>
+  <button
+    data-testid="copy-ingredients"
+    onClick={[Function]}
+  >
+    Copy Ingredients
+  </button>
   <div
     className="ingredients"
   >
@@ -80,6 +86,12 @@ exports[`Recipe Component when \`useFetch\` returns data with 200 status display
   <h3>
     Ingredients
   </h3>
+  <button
+    data-testid="copy-ingredients"
+    onClick={[Function]}
+  >
+    Copy Ingredients
+  </button>
   <div
     className="ingredients"
   >

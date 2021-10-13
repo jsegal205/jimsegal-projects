@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import renderer from "react-test-renderer";
+import { render, fireEvent, getByTestId } from "@testing-library/react";
 
 import { adminUrlBase } from "../../utils";
 import useFetch from "../../utils/useFetch";
@@ -204,6 +205,50 @@ describe("Recipe Component", () => {
         renderer.create(<Recipe {...props} />);
         expect(useFetch).toHaveBeenCalledWith(`${baseUrl}/slash-slug`);
       });
+    });
+  });
+
+  describe("copy ingredients button", () => {
+    Object.assign(navigator, {
+      clipboard: {
+        writeText: () => {},
+      },
+    });
+
+    it("calls navigator.clipboard function event", () => {
+      jest.spyOn(navigator.clipboard, "writeText");
+      const slug = "valid-slug";
+      const props = {
+        location: {
+          pathname: slug,
+        },
+      };
+
+      useFetch.mockReturnValue({
+        loading: false,
+        data: {
+          title: "title",
+          slug,
+          referenceLink: "referenceLink",
+          ingredients: "ingredient1\n- ingredient2",
+          directions: "directions",
+          notes: "notes",
+          status: 200,
+        },
+      });
+
+      const { container } = render(
+        <Router>
+          <Recipe {...props} />
+        </Router>
+      );
+
+      const copyBtn = getByTestId(container, "copy-ingredients");
+      fireEvent.click(copyBtn);
+
+      expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+        "ingredient1\ningredient2"
+      );
     });
   });
 });

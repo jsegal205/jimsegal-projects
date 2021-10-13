@@ -55,6 +55,14 @@ const Recipe = (props) => {
         </small>
       )}
       <h3>Ingredients</h3>
+      <button
+        data-testid="copy-ingredients"
+        onClick={() => {
+          navigator.clipboard.writeText(ingredients.replace(/-\s/gm, ""));
+        }}
+      >
+        Copy Ingredients
+      </button>
       <div className="ingredients">
         <ReactMarkdown source={ingredients} />
       </div>

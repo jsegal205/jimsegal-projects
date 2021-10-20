@@ -20,6 +20,16 @@ const Tabletop = () => {
     setTabletopSearch("");
   };
 
+  const handleRandomGameClick = () => {
+    setTabletopSearch("");
+
+    const randomGameIndex = Math.floor(
+      Math.random() * Math.floor(tableTopData.length - 1)
+    );
+
+    setTabletopSearch(tableTopData[randomGameIndex].title);
+  };
+
   const [gameList, setGameList] = useState([]);
   useEffect(() => {
     if (!loading && tableTopData) {
@@ -42,11 +52,19 @@ const Tabletop = () => {
       {tableTopData && tableTopData.error && <Error componentName="Tabletop" />}
       {tableTopData && tableTopData.length && (
         <>
-          <SearchFilter
-            searchValue={tabletopSearch}
-            handleResetClick={handleResetClick}
-            handleSearchChange={handleSearchChange}
-          />
+          <div className="tabletop-actions">
+            <SearchFilter
+              searchValue={tabletopSearch}
+              handleResetClick={handleResetClick}
+              handleSearchChange={handleSearchChange}
+            />
+            <div className="random-game-container">
+              <label>Number of Games: {gameList.length}</label>
+              <button className="random-game" onClick={handleRandomGameClick}>
+                Random Game
+              </button>
+            </div>
+          </div>
 
           {gameList.length ? (
             <section className="tabletop-cards">

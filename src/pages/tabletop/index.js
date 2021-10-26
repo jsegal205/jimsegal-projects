@@ -60,14 +60,18 @@ const Tabletop = () => {
             />
             <div className="random-game-container">
               <label>Number of Games: {gameList.length}</label>
-              <button className="random-game" onClick={handleRandomGameClick}>
+              <button
+                className="random-game"
+                data-testid="random-game"
+                onClick={handleRandomGameClick}
+              >
                 Random Game
               </button>
             </div>
           </div>
 
           {gameList.length ? (
-            <section className="tabletop-cards">
+            <section className="tabletop-cards" data-testid="tabletop-cards">
               {gameList.map((game) => (
                 <article key={game.title}>
                   <a

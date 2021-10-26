@@ -257,7 +257,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="project-list-item-link"
-            href="https://jimsegal.com/tabletop/"
+            href="/tabletop"
           >
             <div
               class="project-list-item-placeholder"

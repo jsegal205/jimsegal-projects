@@ -56,8 +56,7 @@ export const projectInfo = [
     title: "Travels",
   },
   {
-    absolute: true,
-    link: "https://jimsegal.com/tabletop/",
+    link: "/tabletop",
     subtitle: "My collection of table top games",
     title: "Tabletop Games",
   },

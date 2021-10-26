@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabletop Component Search filtering when input matches none of the data only shows data to match 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -17,63 +17,40 @@
+          <input
+            class=\\"search-filter-input\\"
+            data-testid=\\"search-filter\\"
+            id=\\"search-filter\\"
+            type=\\"text\\"
+-           value=\\"\\"
++           value=\\"mno\\"
+          />
++         <button
++           class=\\"search-filter-reset\\"
++           data-testid=\\"search-filter-reset\\"
++         >
++           Reset
++         </button>
+        </section>
+        <div
+          class=\\"random-game-container\\"
+        >
+          <label>
+-           Number of Games: 2
++           Number of Games: 0
+          </label>
+          <button
+            class=\\"random-game\\"
+            data-testid=\\"random-game\\"
+          >
+            Random Game
+          </button>
+        </div>
+      </div>
+-     <section
+-       class=\\"tabletop-cards\\"
+-       data-testid=\\"tabletop-cards\\"
+-     >
+-       <article>
+-         <a
+-           class=\\"card\\"
+-           href=\\"abcLink\\"
+-           rel=\\"noreferrer\\"
+-           target=\\"_blank\\"
+-         >
+-           <img
+-             alt=\\"abcTitle Cover Artwork\\"
+-             class=\\"card-img\\"
+-             src=\\"abcImage\\"
+-           />
+-           <h3>
+-             abcTitle
+-           </h3>
+-         </a>
+-       </article>
+-       <article>
+-         <a
+-           class=\\"card\\"
+-           href=\\"xyzLink\\"
+-           rel=\\"noreferrer\\"
+-           target=\\"_blank\\"
++     <div
++       class=\\"tabletop-no-results\\"
+      >
+-           <img
+-             alt=\\"xyzTitle Cover Artwork\\"
+-             class=\\"card-img\\"
+-             src=\\"xyzImage\\"
+-           />
+-           <h3>
+-             xyzTitle
+-           </h3>
+-         </a>
+-       </article>
+-     </section>
++       No results for 
++       <strong>
++         <em>
++           mno
++         </em>
++       </strong>
++     </div>
+    </section>
+  </DocumentFragment>"
+`;
+
+exports[`Tabletop Component Search filtering when input matches subset of the data only shows data to match 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -17,18 +17,24 @@
+          <input
+            class=\\"search-filter-input\\"
+            data-testid=\\"search-filter\\"
+            id=\\"search-filter\\"
+            type=\\"text\\"
+-           value=\\"\\"
++           value=\\"a\\"
+          />
++         <button
++           class=\\"search-filter-reset\\"
++           data-testid=\\"search-filter-reset\\"
++         >
++           Reset
++         </button>
+        </section>
+        <div
+          class=\\"random-game-container\\"
+        >
+          <label>
+-           Number of Games: 2
++           Number of Games: 1
+          </label>
+          <button
+            class=\\"random-game\\"
+            data-testid=\\"random-game\\"
+          >
+@@ -52,27 +58,10 @@
+              class=\\"card-img\\"
+              src=\\"abcImage\\"
+            />
+            <h3>
+              abcTitle
+-           </h3>
+-         </a>
+-       </article>
+-       <article>
+-         <a
+-           class=\\"card\\"
+-           href=\\"xyzLink\\"
+-           rel=\\"noreferrer\\"
+-           target=\\"_blank\\"
+-         >
+-           <img
+-             alt=\\"xyzTitle Cover Artwork\\"
+-             class=\\"card-img\\"
+-             src=\\"xyzImage\\"
+-           />
+-           <h3>
+-             xyzTitle
+            </h3>
+          </a>
+        </article>
+      </section>
+    </section>"
+`;
+
+exports[`Tabletop Component when \`useFetch\` is awaiting promise to resolve displays \`Loading...\` 1`] = `
+<div>
+  <section>
+    <h2>
+      My Tabletop Games
+    </h2>
+    <section
+      class="loader"
+    >
+      <div
+        class="loader-wheel"
+      />
+      <div
+        class="loader-text"
+      >
+        Loading
+      </div>
+    </section>
+    0
+  </section>
+</div>
+`;
+
+exports[`Tabletop Component when \`useFetch\` returns data displays data 1`] = `
+<div>
+  <section>
+    <h2>
+      My Tabletop Games
+    </h2>
+    <div
+      class="tabletop-actions"
+    >
+      <section
+        class="search-filter-container"
+      >
+        <label
+          for="search-filter"
+        >
+          Search
+        </label>
+        <input
+          class="search-filter-input"
+          data-testid="search-filter"
+          id="search-filter"
+          type="text"
+          value=""
+        />
+        
+      </section>
+      <div
+        class="random-game-container"
+      >
+        <label>
+          Number of Games: 
+          2
+        </label>
+        <button
+          class="random-game"
+          data-testid="random-game"
+        >
+          Random Game
+        </button>
+      </div>
+    </div>
+    <section
+      class="tabletop-cards"
+      data-testid="tabletop-cards"
+    >
+      <article>
+        <a
+          class="card"
+          href="link"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="title Cover Artwork"
+            class="card-img"
+            src="image"
+          />
+          <h3>
+            title
+          </h3>
+        </a>
+      </article>
+      <article>
+        <a
+          class="card"
+          href="link2"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="title2 Cover Artwork"
+            class="card-img"
+            src="image2"
+          />
+          <h3>
+            title2
+          </h3>
+        </a>
+      </article>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Tabletop Component when \`useFetch\` returns data when 500 status returned displays error messaging 1`] = `
+<div>
+  <section>
+    <h2>
+      My Tabletop Games
+    </h2>
+    <section>
+      <h3>
+        Whoops! There was a problem loading
+         
+        Tabletop data.
+      </h3>
+      <p>
+        Please reload browser to try again in a little bit.
+      </p>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Tabletop Component when \`useFetch\` returns data when no data returned displays no data 1`] = `
+<div>
+  <section>
+    <h2>
+      My Tabletop Games
+    </h2>
+    0
+  </section>
+</div>
+`;

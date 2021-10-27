@@ -51,7 +51,11 @@ describe("Recipe Component", () => {
           data: { status: 404 },
         });
 
-        const tree = renderer.create(<Recipe {...props} />);
+        const tree = renderer.create(
+          <Router>
+            <Recipe {...props} />
+          </Router>
+        );
         expect(useFetch).toHaveBeenCalledWith(`${baseUrl}/${slug}`);
         expect(tree.toJSON()).toMatchSnapshot();
       });

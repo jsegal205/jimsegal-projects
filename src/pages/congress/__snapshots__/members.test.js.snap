@@ -241,9 +241,17 @@ exports[`CongressMembers Component when \`useFetch\` returns data with 200 statu
 `;
 
 exports[`CongressMembers Component when \`useFetch\` returns data with 404 status displays \`Not Found\` 1`] = `
-<h1>
-  Not Found
-</h1>
+Array [
+  <h2>
+    Sorry, looks like I couldn't find what you were looking for.
+  </h2>,
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Click to return somewhere familiar
+  </a>,
+]
 `;
 
 exports[`CongressMembers Component when \`useFetch\` returns data with 500 status displays error message 1`] = `

@@ -281,7 +281,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="project-list-item-link"
-            href="https://jimsegal.com/travel/"
+            href="/travel"
           >
             <div
               class="project-list-item-placeholder"

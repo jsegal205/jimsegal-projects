@@ -50,8 +50,7 @@ export const projectInfo = [
     title: "Reading List",
   },
   {
-    absolute: true,
-    link: "https://jimsegal.com/travel/",
+    link: "/travel",
     subtitle: "Places that I have traveled since graduating college in 2008",
     title: "Travels",
   },

@@ -24,7 +24,7 @@ const Travel = () => {
   );
   const { isLoaded: googleMapsLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API,
   });
 
   return googleMapsLoaded && !travelLoading ? (

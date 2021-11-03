@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-google-maps/api": "^2.5.0",
     "@sentry/react": "^6.15.0",
     "@sentry/tracing": "^6.15.0",
     "axios": "^0.24.0",

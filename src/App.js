@@ -18,6 +18,7 @@ import MountainGoat from "./pages/mountian-goat";
 import DogeTracker from "./pages/dogetracker";
 import RandomPlaceholder from "./pages/random-placeholder";
 import Tabletop from "./pages/tabletop";
+import Travel from "./pages/travel";
 
 const App = () => {
   return (
@@ -50,6 +51,7 @@ const App = () => {
             <Route path="/recipe/:recipeSlug" component={withTracker(Recipe)} />
             <Route path="/spacex" component={withTracker(SpaceX)} />
             <Route path="/tabletop" component={withTracker(Tabletop)} />
+            <Route path="/travel" component={withTracker(Travel)} />
             <Route path="*" component={withTracker(NotFound)} />
           </Switch>
         </article>

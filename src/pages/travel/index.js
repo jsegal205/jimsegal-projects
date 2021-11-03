@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { apiUrlBase } from "../../utils";
 import useFetch from "../../utils/useFetch";

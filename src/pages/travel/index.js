@@ -2,6 +2,8 @@ import React from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { apiUrlBase } from "../../utils";
 import useFetch from "../../utils/useFetch";
+import Error from "../../components/error";
+import Loading from "../../components/loading";
 
 import Marker from "./marker";
 
@@ -27,22 +29,31 @@ const Travel = () => {
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API,
   });
 
-  return googleMapsLoaded && !travelLoading ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={{ lat: chicago.lat, lng: chicago.lng }}
-      zoom={3}
-    >
-      <>
-        <Marker {...chicago} />
-        {!!travelData.length &&
-          travelData.map((city) => (
-            <Marker {...city} content={city.visits.join("<br />")} />
-          ))}
-      </>
-    </GoogleMap>
-  ) : (
-    <></>
+  return (
+    <section>
+      <h2>My Travels</h2>
+      <small>Vacation destinations since 2008</small>
+      {(travelLoading || !googleMapsLoaded) && <Loading />}
+      {travelData && travelData.error && <Error componentName="Travel" />}
+      {!travelLoading && googleMapsLoaded && (
+        <>
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={{ lat: chicago.lat, lng: chicago.lng }}
+            zoom={3}
+          >
+            <>
+              <Marker {...chicago} />
+              {!!travelData.length &&
+                travelData.map((city) => (
+                  <Marker {...city} content={city.visits.join("<br />")} />
+                ))}
+            </>
+          </GoogleMap>
+          <small>Click the pins for more information</small>
+        </>
+      )}
+    </section>
   );
 };
 

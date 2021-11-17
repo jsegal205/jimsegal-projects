@@ -35,7 +35,7 @@ const Travel = () => {
       <small>Vacation destinations since 2008</small>
       {(travelLoading || !googleMapsLoaded) && <Loading />}
       {travelData && travelData.error && <Error componentName="Travel" />}
-      {!travelLoading && googleMapsLoaded && (
+      {!travelLoading && travelData && !travelData.error && googleMapsLoaded && (
         <>
           <GoogleMap
             mapContainerStyle={containerStyle}
@@ -45,8 +45,12 @@ const Travel = () => {
             <>
               <Marker {...chicago} />
               {!!travelData.length &&
-                travelData.map((city) => (
-                  <Marker {...city} content={city.visits.join("<br />")} />
+                travelData.map((dest) => (
+                  <Marker
+                    key={`${dest.city}-${dest.state}`}
+                    {...dest}
+                    content={dest.visits.join("<br />")}
+                  />
                 ))}
             </>
           </GoogleMap>

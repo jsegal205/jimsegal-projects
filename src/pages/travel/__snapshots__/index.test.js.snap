@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Travel Component when \`useFetch\` is awaiting promise to resolve displays \`Loading...\` 1`] = `
+<div>
+  <section>
+    <h2>
+      My Travels
+    </h2>
+    <small>
+      Vacation destinations since 2008
+    </small>
+    <section
+      class="loader"
+    >
+      <div
+        class="loader-wheel"
+      />
+      <div
+        class="loader-text"
+      >
+        Loading
+      </div>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`Travel Component when \`useFetch\` returns data displays data 1`] = `
+<div>
+  <section>
+    <h2>
+      My Travels
+    </h2>
+    <small>
+      Vacation destinations since 2008
+    </small>
+    mockGoogleMap
+    <small>
+      Click the pins for more information
+    </small>
+  </section>
+</div>
+`;
+
+exports[`Travel Component when \`useFetch\` returns data when 500 status returned displays error messaging 1`] = `
+<div>
+  <section>
+    <h2>
+      My Travels
+    </h2>
+    <small>
+      Vacation destinations since 2008
+    </small>
+    <section>
+      <h3>
+        Whoops! There was a problem loading
+         
+        Travel data.
+      </h3>
+      <p>
+        Please reload browser to try again in a little bit.
+      </p>
+    </section>
+  </section>
+</div>
+`;

@@ -18,6 +18,7 @@ import MountainGoat from "./pages/mountian-goat";
 import DogeTracker from "./pages/dogetracker";
 import RandomPlaceholder from "./pages/random-placeholder";
 import Tabletop from "./pages/tabletop";
+import MoonPhase from "./pages/moon-phase";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/congress" component={withTracker(Congress)} />
             <Route path="/dogetracker" component={withTracker(DogeTracker)} />
             <Route path="/isJimWearingShorts" component={withTracker(Shorts)} />
+            <Route path="/moon-phase" component={withTracker(MoonPhase)} />
             <Route path="/mountaingoat" component={withTracker(MountainGoat)} />
             <Route
               path="/random-placeholder"

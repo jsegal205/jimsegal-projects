@@ -2039,10 +2039,10 @@
     "@testing-library/dom" "^8.0.0"
     "@types/react-dom" "*"
 
-"@testing-library/user-event@^14.0.4":
-  version "14.0.4"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.0.4.tgz#5b430a9c27f25078bff4471661b755115d0db9d4"
-  integrity sha512-VBZe5lcUsmrQyOwIFvqOxLBoaTw1/Qy4Ek+VgmFYs719bs2SxUp42vbsb7ATlQDkHdj4OIQlucfpwxe5WoG1jA==
+"@testing-library/user-event@^14.4.1":
+  version "14.4.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.4.1.tgz#dfa1cceef4833f5288a4090d1b85dce5d8dc20b6"
+  integrity sha512-Gr20dje1RaNxZ1ehHGPvFkLswfetBQKCfRD/lo6sUJQ52X2TV/QnqUpkjoShfEebrB2KiTPfQkcONwdQiofLhg==
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -8189,7 +8189,7 @@ minimatch@3.0.4, minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
+minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
   integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==

@@ -3,14 +3,14 @@ import { BrowserRouter as Router } from "react-router-dom";
 import renderer from "react-test-renderer";
 import { render, fireEvent, getByTestId } from "@testing-library/react";
 
-import { adminUrlBase } from "../../utils";
+import { apiUrlBase } from "../../utils";
 import useFetch from "../../utils/useFetch";
 import Recipe from "./index";
 
 jest.mock("../../utils/useFetch", () => jest.fn());
 
 describe("Recipe Component", () => {
-  const baseUrl = `${adminUrlBase}/recipes`;
+  const baseUrl = `${apiUrlBase}/recipes`;
 
   describe("when `useFetch` is awaiting promise to resolve", () => {
     it("displays `Loading...`", () => {

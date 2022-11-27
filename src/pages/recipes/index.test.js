@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import useFetch from "../../utils/useFetch";
 import Recipes from "./index";
-import { adminUrlBase } from "../../utils";
+import { apiUrlBase } from "../../utils";
 import { render, fireEvent, getByTestId } from "@testing-library/react";
 import { toMatchDiffSnapshot } from "snapshot-diff";
 
@@ -12,7 +12,7 @@ expect.extend({ toMatchDiffSnapshot });
 jest.mock("../../utils/useFetch", () => jest.fn());
 
 describe("Recipes Component", () => {
-  const baseUrl = `${adminUrlBase}/recipes`;
+  const baseUrl = `${apiUrlBase}/recipes`;
 
   describe("when `useFetch` is awaiting promise to resolve", () => {
     it("displays `Loading...`", () => {

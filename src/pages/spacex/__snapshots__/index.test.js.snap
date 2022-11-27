@@ -34,20 +34,7 @@ exports[`SpaceX Component when \`useFetch\` returns data displays data 1`] = `
     </h2>
     <div
       class="spacex-mega"
-    >
-      <div>
-        366
-         
-        days
-         
-      </div>
-      <div>
-        0
-         
-        seconds
-         
-      </div>
-    </div>
+    />
     <h3>
       mission_name_future
     </h3>

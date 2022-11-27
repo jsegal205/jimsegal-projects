@@ -10,7 +10,7 @@ import Recipe from "./index";
 jest.mock("../../utils/useFetch", () => jest.fn());
 
 describe("Recipe Component", () => {
-  const baseUrl = `${apiUrlBase}/recipes`;
+  const baseUrl = `${apiUrlBase}/recipe`;
 
   describe("when `useFetch` is awaiting promise to resolve", () => {
     it("displays `Loading...`", () => {

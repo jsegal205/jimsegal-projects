@@ -25,7 +25,7 @@ const getSlug = ({ pathname, state }) => {
 
 const Recipe = (props) => {
   const slug = getSlug(props.location);
-  const { loading, data: recipe } = useFetch(`${apiUrlBase}/recipes/${slug}`);
+  const { loading, data: recipe } = useFetch(`${apiUrlBase}/recipe/${slug}`);
 
   if (loading) {
     return <Loading />;

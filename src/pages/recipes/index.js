@@ -41,7 +41,7 @@ const Recipes = () => {
       <h2>Recipes</h2>
       {loading && <Loading />}
       {recipes && recipes.error && <Error componentName="Recipes" />}
-      {recipes && !!recipeList.length && (
+      {recipes && !!recipes.length && (
         <>
           <SearchFilter
             searchValue={recipeSearch}

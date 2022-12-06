@@ -5,31 +5,28 @@ exports[`Recipes Component Search filtering when input matches none of the data 
 - First value
 + Second value
 
-  <DocumentFragment>
-    <section>
-      <h2>
-        Recipes
-      </h2>
--     <section
--       class=\\"search-filter-container\\"
--     >
--       <label
--         for=\\"search-filter\\"
--       >
--         Search
--       </label>
--       <input
--         class=\\"search-filter-input\\"
--         data-testid=\\"search-filter\\"
--         id=\\"search-filter\\"
--         type=\\"text\\"
+@@ -14,29 +14,32 @@
+        <input
+          class=\\"search-filter-input\\"
+          data-testid=\\"search-filter\\"
+          id=\\"search-filter\\"
+          type=\\"text\\"
 -         value=\\"\\"
--       />
--     </section>
++         value=\\"mno\\"
+        />
++       <button
++         class=\\"search-filter-reset\\"
++         data-testid=\\"search-filter-reset\\"
++       >
++         Reset
++       </button>
+      </section>
 -     <ul
 -       class=\\"recipes-list\\"
 -       data-testid=\\"recipes-list\\"
--     >
++     <div
++       class=\\"recipes-no-results\\"
+      >
 -       <li>
 -         <a
 -           href=\\"/recipe/abc\\"
@@ -40,6 +37,13 @@ exports[`Recipes Component Search filtering when input matches none of the data 
 -       <li>
 -         <a
 -           href=\\"/recipe/xyz\\"
++       No results for 
++       <strong>
++         <em>
++           mno
++         </em>
++       </strong>
++     </div>
 +     <div
 +       class=\\"recipes-no-results\\"
 +       data-testid=\\"recipes-no-results\\"

@@ -24,7 +24,7 @@ const Recipes = () => {
   const [recipeList, setRecipeList] = useState([]);
   useEffect(() => {
     if (!loading && recipes) {
-      if (recipes.error) {
+      if (recipes.error || !Array.isArray(recipes)) {
         setRecipeList([]);
         return;
       }
@@ -41,14 +41,14 @@ const Recipes = () => {
       <h2>Recipes</h2>
       {loading && <Loading />}
       {recipes && recipes.error && <Error componentName="Recipes" />}
-      {recipes && recipes.length && (
+      {recipes && !!recipeList.length && (
         <>
           <SearchFilter
             searchValue={recipeSearch}
             handleResetClick={handleResetClick}
             handleSearchChange={handleSearchChange}
           />
-          {recipeList.length ? (
+          {!!recipeList.length ? (
             <ul className="recipes-list" data-testid="recipes-list">
               {recipeList.map((recipe) => (
                 <li key={recipe.slug}>
@@ -72,6 +72,11 @@ const Recipes = () => {
             </div>
           )}
         </>
+      )}
+      {recipes && recipeList.length === 0 && (
+        <div className="recipes-no-results" data-testid="recipes-no-results">
+          No results
+        </div>
       )}
     </section>
   );

@@ -41,7 +41,7 @@ const Recipes = () => {
       <h2>Recipes</h2>
       {loading && <Loading />}
       {recipes && recipes.error && <Error componentName="Recipes" />}
-      {recipes && !!recipes.length && (
+      {recipes && recipes.length && (
         <>
           <SearchFilter
             searchValue={recipeSearch}
@@ -73,11 +73,12 @@ const Recipes = () => {
           )}
         </>
       )}
-      {recipes && recipeList.length === 0 && (
-        <div className="recipes-no-results" data-testid="recipes-no-results">
-          No results
-        </div>
-      )}
+      {(recipes && recipes.length === 0) ||
+        (recipeList.length === 0 && (
+          <div className="recipes-no-results" data-testid="recipes-no-results">
+            No results
+          </div>
+        ))}
     </section>
   );
 };

@@ -120,12 +120,7 @@ exports[`Recipes Component when \`useFetch\` is awaiting promise to resolve disp
         Loading
       </div>
     </section>
-    <div
-      class="recipes-no-results"
-      data-testid="recipes-no-results"
-    >
-      No results
-    </div>
+    0
   </section>
 </div>
 `;
@@ -208,12 +203,7 @@ exports[`Recipes Component when \`useFetch\` returns data when no data returned 
     <h2>
       Recipes
     </h2>
-    <div
-      class="recipes-no-results"
-      data-testid="recipes-no-results"
-    >
-      No results
-    </div>
+    0
   </section>
 </div>
 `;

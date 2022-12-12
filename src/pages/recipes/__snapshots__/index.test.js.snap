@@ -5,7 +5,7 @@ exports[`Recipes Component Search filtering when input matches none of the data 
 - First value
 + Second value
 
-@@ -14,29 +14,26 @@
+@@ -14,29 +14,32 @@
         <input
           class=\\"search-filter-input\\"
           data-testid=\\"search-filter\\"
@@ -14,40 +14,45 @@ exports[`Recipes Component Search filtering when input matches none of the data 
 -         value=\\"\\"
 +         value=\\"mno\\"
         />
--     </section>
--     <ul
--       class=\\"recipes-list\\"
--       data-testid=\\"recipes-list\\"
--     >
--       <li>
--         <a
--           href=\\"/recipe/abc\\"
 +       <button
 +         class=\\"search-filter-reset\\"
 +         data-testid=\\"search-filter-reset\\"
-        >
++       >
++         Reset
++       </button>
+      </section>
+-     <ul
+-       class=\\"recipes-list\\"
+-       data-testid=\\"recipes-list\\"
++     <div
++       class=\\"recipes-no-results\\"
+      >
+-       <li>
+-         <a
+-           href=\\"/recipe/abc\\"
+-         >
 -           abc
 -         </a>
 -       </li>
 -       <li>
 -         <a
 -           href=\\"/recipe/xyz\\"
-+         Reset
-+       </button>
-+     </section>
-+     <div
-+       class=\\"recipes-no-results\\"
-      >
--           xyz
--         </a>
--       </li>
--     </ul>
 +       No results for 
 +       <strong>
 +         <em>
 +           mno
 +         </em>
 +       </strong>
++     </div>
++     <div
++       class=\\"recipes-no-results\\"
++       data-testid=\\"recipes-no-results\\"
+      >
+-           xyz
+-         </a>
+-       </li>
+-     </ul>
++       No results
 +     </div>
     </section>
   </DocumentFragment>"
@@ -182,6 +187,12 @@ exports[`Recipes Component when \`useFetch\` returns data when 500 status return
         Please reload browser to try again in a little bit.
       </p>
     </section>
+    <div
+      class="recipes-no-results"
+      data-testid="recipes-no-results"
+    >
+      No results
+    </div>
   </section>
 </div>
 `;

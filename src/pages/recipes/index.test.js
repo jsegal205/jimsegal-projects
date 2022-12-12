@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import "@testing-library/jest-dom";
 import useFetch from "../../utils/useFetch";
 import Recipes from "./index";
 import { apiUrlBase } from "../../utils";
-import { render, fireEvent, getByTestId } from "@testing-library/react";
+import { render, fireEvent, getByTestId, screen } from "@testing-library/react";
 import { toMatchDiffSnapshot } from "snapshot-diff";
 
 expect.extend({ toMatchDiffSnapshot });
@@ -62,6 +63,26 @@ describe("Recipes Component", () => {
       );
       expect(useFetch).toHaveBeenCalledWith(baseUrl);
       expect(container).toMatchSnapshot();
+    });
+
+    describe("when data returned as non array", () => {
+      it("displays no data", async () => {
+        useFetch.mockReturnValue({
+          loading: false,
+          data: {
+            not: "an array",
+          },
+        });
+
+        render(
+          <Router>
+            <Recipes />
+          </Router>
+        );
+        expect(useFetch).toHaveBeenCalledWith(baseUrl);
+        expect(screen.getByTestId("recipes-no-results")).toBeInTheDocument();
+        expect(screen.getByText("No results")).toBeInTheDocument();
+      });
     });
 
     describe("when no data returned", () => {

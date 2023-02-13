@@ -40,8 +40,10 @@ const Recipes = () => {
     <section>
       <h2>Recipes</h2>
       {loading && <Loading />}
-      {recipes && recipes.error && <Error componentName="Recipes" />}
-      {recipes && recipes.length && (
+      {!loading && recipes && recipes.error && (
+        <Error componentName="Recipes" />
+      )}
+      {!loading && recipes && recipes.length !== 0 && (
         <>
           <SearchFilter
             searchValue={recipeSearch}
@@ -73,10 +75,19 @@ const Recipes = () => {
           )}
         </>
       )}
-      {(recipes && recipes.length === 0) ||
-        (recipeList.length === 0 && (
+      {(!loading && recipes && recipes.length === 0) ||
+        (!loading && recipeSearch === "" && recipeList.length === 0 && (
           <div className="recipes-no-results" data-testid="recipes-no-results">
-            No results
+            OH NO! There definitely should be some.
+            <br />
+            <img
+              src="https://em-content.zobj.net/source/microsoft-teams/337/thinking-face_1f914.png"
+              alt="thinking face emoji"
+              height="100px"
+              width="100px"
+            />
+            <br />
+            Try refreshing the page to get results.
           </div>
         ))}
     </section>

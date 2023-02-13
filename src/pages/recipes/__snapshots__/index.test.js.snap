@@ -5,7 +5,7 @@ exports[`Recipes Component Search filtering when input matches none of the data 
 - First value
 + Second value
 
-@@ -14,29 +14,32 @@
+@@ -14,29 +14,26 @@
         <input
           class=\\"search-filter-input\\"
           data-testid=\\"search-filter\\"
@@ -14,45 +14,40 @@ exports[`Recipes Component Search filtering when input matches none of the data 
 -         value=\\"\\"
 +         value=\\"mno\\"
         />
-+       <button
-+         class=\\"search-filter-reset\\"
-+         data-testid=\\"search-filter-reset\\"
-+       >
-+         Reset
-+       </button>
-      </section>
+-     </section>
 -     <ul
 -       class=\\"recipes-list\\"
 -       data-testid=\\"recipes-list\\"
-+     <div
-+       class=\\"recipes-no-results\\"
-      >
+-     >
 -       <li>
 -         <a
 -           href=\\"/recipe/abc\\"
--         >
++       <button
++         class=\\"search-filter-reset\\"
++         data-testid=\\"search-filter-reset\\"
+        >
 -           abc
 -         </a>
 -       </li>
 -       <li>
 -         <a
 -           href=\\"/recipe/xyz\\"
++         Reset
++       </button>
++     </section>
++     <div
++       class=\\"recipes-no-results\\"
+      >
+-           xyz
+-         </a>
+-       </li>
+-     </ul>
 +       No results for 
 +       <strong>
 +         <em>
 +           mno
 +         </em>
 +       </strong>
-+     </div>
-+     <div
-+       class=\\"recipes-no-results\\"
-+       data-testid=\\"recipes-no-results\\"
-      >
--           xyz
--         </a>
--       </li>
--     </ul>
-+       No results
 +     </div>
     </section>
   </DocumentFragment>"
@@ -120,7 +115,6 @@ exports[`Recipes Component when \`useFetch\` is awaiting promise to resolve disp
         Loading
       </div>
     </section>
-    0
   </section>
 </div>
 `;
@@ -187,11 +181,46 @@ exports[`Recipes Component when \`useFetch\` returns data when 500 status return
         Please reload browser to try again in a little bit.
       </p>
     </section>
+    <section
+      class="search-filter-container"
+    >
+      <label
+        for="search-filter"
+      >
+        Search
+      </label>
+      <input
+        class="search-filter-input"
+        data-testid="search-filter"
+        id="search-filter"
+        type="text"
+        value=""
+      />
+      
+    </section>
+    <div
+      class="recipes-no-results"
+    >
+      No results for
+       
+      <strong>
+        <em />
+      </strong>
+    </div>
     <div
       class="recipes-no-results"
       data-testid="recipes-no-results"
     >
-      No results
+      OH NO! There definitely should be some.
+      <br />
+      <img
+        alt="thinking face emoji"
+        height="100px"
+        src="https://em-content.zobj.net/source/microsoft-teams/337/thinking-face_1f914.png"
+        width="100px"
+      />
+      <br />
+      Try refreshing the page to get results.
     </div>
   </section>
 </div>
@@ -203,7 +232,6 @@ exports[`Recipes Component when \`useFetch\` returns data when no data returned 
     <h2>
       Recipes
     </h2>
-    0
   </section>
 </div>
 `;

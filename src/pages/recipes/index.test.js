@@ -81,7 +81,6 @@ describe("Recipes Component", () => {
         );
         expect(useFetch).toHaveBeenCalledWith(baseUrl);
         expect(screen.getByTestId("recipes-no-results")).toBeInTheDocument();
-        expect(screen.getByText("No results")).toBeInTheDocument();
       });
     });
 

@@ -1,0 +1,34 @@
+.moon-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.space {
+  align-items: center;
+  background-color: #222222;
+  display: flex;
+  height: 150px;
+  justify-items: center;
+  position: relative;
+  width: 300px;
+}
+
+.moon,
+.shadow {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+.moon {
+  left: 100px;
+  background-color: #e5e4e2;
+}
+.shadow {
+  background: #222222;
+}
+
+.moon-credit {
+  font-size: 0.75rem;
+}

@@ -129,6 +129,30 @@ exports[`Home Component renders correctly 1`] = `
       >
         <a
           class="project-list-item-link"
+          href="/moon-phase"
+        >
+          <div
+            class="project-list-item-placeholder"
+            style="background-color: rgb(0, 0, 0);"
+          >
+            <h2
+              class="project-list-item-title"
+              style="color: rgb(68, 68, 68);"
+            >
+              Moon Phase
+            </h2>
+          </div>
+          <p>
+            Check the phases of the moon
+          </p>
+        </a>
+      </li>
+      <li
+        class="project-list-item"
+        style="border-color: #ffffff;"
+      >
+        <a
+          class="project-list-item-link"
           href="/mountaingoat"
         >
           <div

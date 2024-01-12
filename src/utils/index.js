@@ -71,6 +71,11 @@ export const projectInfo = [
     subtitle: "When you are overwhelmed by placeholder images",
     title: "Random Placeholder",
   },
+  {
+    link: "/moon-phase",
+    subtitle: "Check the phases of the moon",
+    title: "Moon Phase",
+  },
 ].sort(function (a, b) {
   const titleA = a.title.toUpperCase();
   const titleB = b.title.toUpperCase();

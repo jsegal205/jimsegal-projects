@@ -14,13 +14,14 @@ describe("UTILS - adminUrlBase", () => {
 
 describe("UTILS - projectInfo", () => {
   it("returns array of project info", () => {
-    expect(projectInfo.length).toEqual(12);
+    expect(projectInfo.length).toEqual(13);
     expect(projectInfo.map((project) => project.title)).toEqual([
       "JimSegal.com",
       "Congress",
       "Dogecoin Price Tracker",
       "Is Chicago Colder Than Anchorage?",
       "Is Jim Wearing Shorts?",
+      "Moon Phase",
       "Mountain Goat Game",
       "Random Placeholder",
       "Reading List",

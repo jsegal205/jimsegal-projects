@@ -225,30 +225,6 @@ exports[`Home Component renders correctly 1`] = `
       >
         <a
           class="project-list-item-link"
-          href="/spacex"
-        >
-          <div
-            class="project-list-item-placeholder"
-            style="background-color: rgb(0, 0, 0);"
-          >
-            <h2
-              class="project-list-item-title"
-              style="color: rgb(68, 68, 68);"
-            >
-              Space X
-            </h2>
-          </div>
-          <p>
-            A countdown timer until the next launch of a Space X rocket
-          </p>
-        </a>
-      </li>
-      <li
-        class="project-list-item"
-        style="border-color: #ffffff;"
-      >
-        <a
-          class="project-list-item-link"
           href="/tabletop"
         >
           <div

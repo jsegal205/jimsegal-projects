@@ -32,11 +32,6 @@ export const projectInfo = [
     title: "Recipes",
   },
   {
-    link: "/spacex",
-    subtitle: "A countdown timer until the next launch of a Space X rocket",
-    title: "Space X",
-  },
-  {
     absolute: true,
     link: "https://jimsegal.com/IsChicagoColderThanAnchorage/",
     subtitle:

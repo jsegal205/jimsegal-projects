@@ -14,7 +14,7 @@ describe("UTILS - adminUrlBase", () => {
 
 describe("UTILS - projectInfo", () => {
   it("returns array of project info", () => {
-    expect(projectInfo.length).toEqual(12);
+    expect(projectInfo.length).toEqual(11);
     expect(projectInfo.map((project) => project.title)).toEqual([
       "JimSegal.com",
       "Congress",
@@ -25,7 +25,6 @@ describe("UTILS - projectInfo", () => {
       "Random Placeholder",
       "Reading List",
       "Recipes",
-      "Space X",
       "Tabletop Games",
       "Travels",
     ]);

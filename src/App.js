@@ -6,7 +6,6 @@ import withTracker from "./GoogleAnalyticsTracker";
 
 import Recipes from "./pages/recipes";
 import Recipe from "./pages/recipe";
-import SpaceX from "./pages/spacex";
 import NotFound from "./pages/not-found";
 import Congress from "./pages/congress";
 import CongressMembers from "./pages/congress/members";
@@ -48,7 +47,6 @@ const App = () => {
             />
             <Route path="/recipes" component={withTracker(Recipes)} />
             <Route path="/recipe/:recipeSlug" component={withTracker(Recipe)} />
-            <Route path="/spacex" component={withTracker(SpaceX)} />
             <Route path="/tabletop" component={withTracker(Tabletop)} />
             <Route path="*" component={withTracker(NotFound)} />
           </Switch>

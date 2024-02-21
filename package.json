@@ -19,6 +19,7 @@
     "start": "PORT=8100 react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "jest --colors --verbose --no-cache -u",
+    "ci": "yarn install --frozen-lockfile",
     "ci-test": "jest --colors --verbose --no-cache --ci",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

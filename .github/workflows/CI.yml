@@ -14,7 +14,7 @@ jobs:
       - name: Install yarn
         run: npm install -g yarn
       - name: Install deps
-        run: yarn install
+        run: yarn ci
       - name: Build
         run: yarn build
       - name: Run Prettier

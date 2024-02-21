@@ -61,11 +61,6 @@ export const projectInfo = [
       "Get the current price of the hottest LEGITIMATE cryptocurrency out there",
     title: "Dogecoin Price Tracker",
   },
-  {
-    link: "/random-placeholder",
-    subtitle: "When you are overwhelmed by placeholder images",
-    title: "Random Placeholder",
-  },
 ].sort(function (a, b) {
   const titleA = a.title.toUpperCase();
   const titleB = b.title.toUpperCase();

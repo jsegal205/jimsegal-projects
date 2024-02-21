@@ -6,7 +6,6 @@ import withTracker from "./GoogleAnalyticsTracker";
 
 import Recipes from "./pages/recipes";
 import Recipe from "./pages/recipe";
-import SpaceX from "./pages/spacex";
 import NotFound from "./pages/not-found";
 import Congress from "./pages/congress";
 import CongressMembers from "./pages/congress/members";
@@ -16,7 +15,6 @@ import Home from "./pages/home";
 import Shorts from "./pages/shorts";
 import MountainGoat from "./pages/mountian-goat";
 import DogeTracker from "./pages/dogetracker";
-import RandomPlaceholder from "./pages/random-placeholder";
 import Tabletop from "./pages/tabletop";
 
 const App = () => {
@@ -42,13 +40,8 @@ const App = () => {
             <Route path="/dogetracker" component={withTracker(DogeTracker)} />
             <Route path="/isJimWearingShorts" component={withTracker(Shorts)} />
             <Route path="/mountaingoat" component={withTracker(MountainGoat)} />
-            <Route
-              path="/random-placeholder"
-              component={withTracker(RandomPlaceholder)}
-            />
             <Route path="/recipes" component={withTracker(Recipes)} />
             <Route path="/recipe/:recipeSlug" component={withTracker(Recipe)} />
-            <Route path="/spacex" component={withTracker(SpaceX)} />
             <Route path="/tabletop" component={withTracker(Tabletop)} />
             <Route path="*" component={withTracker(NotFound)} />
           </Switch>

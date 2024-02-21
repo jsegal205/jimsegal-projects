@@ -32,11 +32,6 @@ export const projectInfo = [
     title: "Recipes",
   },
   {
-    link: "/spacex",
-    subtitle: "A countdown timer until the next launch of a Space X rocket",
-    title: "Space X",
-  },
-  {
     absolute: true,
     link: "https://jimsegal.com/IsChicagoColderThanAnchorage/",
     subtitle:
@@ -65,11 +60,6 @@ export const projectInfo = [
     subtitle:
       "Get the current price of the hottest LEGITIMATE cryptocurrency out there",
     title: "Dogecoin Price Tracker",
-  },
-  {
-    link: "/random-placeholder",
-    subtitle: "When you are overwhelmed by placeholder images",
-    title: "Random Placeholder",
   },
 ].sort(function (a, b) {
   const titleA = a.title.toUpperCase();

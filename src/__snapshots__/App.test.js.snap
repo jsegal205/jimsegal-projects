@@ -161,30 +161,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="project-list-item-link"
-            href="/random-placeholder"
-          >
-            <div
-              class="project-list-item-placeholder"
-              style="background-color: rgb(0, 0, 0);"
-            >
-              <h2
-                class="project-list-item-title"
-                style="color: rgb(68, 68, 68);"
-              >
-                Random Placeholder
-              </h2>
-            </div>
-            <p>
-              When you are overwhelmed by placeholder images
-            </p>
-          </a>
-        </li>
-        <li
-          class="project-list-item"
-          style="border-color: #ffffff;"
-        >
-          <a
-            class="project-list-item-link"
             href="https://jimsegal.com/readinglist/"
           >
             <div
@@ -224,30 +200,6 @@ exports[`renders correctly 1`] = `
             </div>
             <p>
               A bunch of recipes that I frequent and wanted to show off
-            </p>
-          </a>
-        </li>
-        <li
-          class="project-list-item"
-          style="border-color: #ffffff;"
-        >
-          <a
-            class="project-list-item-link"
-            href="/spacex"
-          >
-            <div
-              class="project-list-item-placeholder"
-              style="background-color: rgb(0, 0, 0);"
-            >
-              <h2
-                class="project-list-item-title"
-                style="color: rgb(68, 68, 68);"
-              >
-                Space X
-              </h2>
-            </div>
-            <p>
-              A countdown timer until the next launch of a Space X rocket
             </p>
           </a>
         </li>

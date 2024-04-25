@@ -12,11 +12,6 @@ export const projectInfo = [
     title: "JimSegal.com",
   },
   {
-    link: "/congress",
-    subtitle: "Some fun data surrounding the current congressional sesssion",
-    title: "Congress",
-  },
-  {
     link: "/isJimWearingShorts",
     subtitle: "A site to predict if Jim is wearing shorts or not",
     title: "Is Jim Wearing Shorts?",
@@ -39,27 +34,9 @@ export const projectInfo = [
     title: "Is Chicago Colder Than Anchorage?",
   },
   {
-    absolute: true,
-    link: "https://jimsegal.com/readinglist/",
-    subtitle: "Books I have read or listened to",
-    title: "Reading List",
-  },
-  {
-    absolute: true,
-    link: "https://jimsegal.com/travel/",
-    subtitle: "Places that I have traveled since graduating college in 2008",
-    title: "Travels",
-  },
-  {
     link: "/tabletop",
     subtitle: "My collection of table top games",
     title: "Tabletop Games",
-  },
-  {
-    link: "/dogetracker",
-    subtitle:
-      "Get the current price of the hottest LEGITIMATE cryptocurrency out there",
-    title: "Dogecoin Price Tracker",
   },
 ].sort(function (a, b) {
   const titleA = a.title.toUpperCase();

@@ -7,14 +7,10 @@ import withTracker from "./GoogleAnalyticsTracker";
 import Recipes from "./pages/recipes";
 import Recipe from "./pages/recipe";
 import NotFound from "./pages/not-found";
-import Congress from "./pages/congress";
-import CongressMembers from "./pages/congress/members";
-import CongressMember from "./pages/congress/member";
 import TopNav from "./components/topnav";
 import Home from "./pages/home";
 import Shorts from "./pages/shorts";
 import MountainGoat from "./pages/mountian-goat";
-import DogeTracker from "./pages/dogetracker";
 import Tabletop from "./pages/tabletop";
 
 const App = () => {
@@ -28,16 +24,6 @@ const App = () => {
         <article>
           <Switch>
             <Route exact path="/" component={withTracker(Home)} />
-            <Route
-              path="/congress/:chamber/members"
-              component={withTracker(CongressMembers)}
-            />
-            <Route
-              path="/congress/:chamber/member/:id"
-              component={withTracker(CongressMember)}
-            />
-            <Route path="/congress" component={withTracker(Congress)} />
-            <Route path="/dogetracker" component={withTracker(DogeTracker)} />
             <Route path="/isJimWearingShorts" component={withTracker(Shorts)} />
             <Route path="/mountaingoat" component={withTracker(MountainGoat)} />
             <Route path="/recipes" component={withTracker(Recipes)} />

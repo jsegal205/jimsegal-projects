@@ -14,18 +14,14 @@ describe("UTILS - adminUrlBase", () => {
 
 describe("UTILS - projectInfo", () => {
   it("returns array of project info", () => {
-    expect(projectInfo.length).toEqual(10);
+    expect(projectInfo.length).toEqual(6);
     expect(projectInfo.map((project) => project.title)).toEqual([
       "JimSegal.com",
-      "Congress",
-      "Dogecoin Price Tracker",
       "Is Chicago Colder Than Anchorage?",
       "Is Jim Wearing Shorts?",
       "Mountain Goat Game",
-      "Reading List",
       "Recipes",
       "Tabletop Games",
-      "Travels",
     ]);
   });
 });

@@ -1,3 +1,5 @@
+Project has been archived in favor of https://github.com/jsegal205/jimsegal-com
+
 # Projects
 
 https://projects.jimsegal.com
